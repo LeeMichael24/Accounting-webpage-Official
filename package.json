@@ -1,8 +1,8 @@
 {
-  "name": "megakit",
+  "name": "Accounting-Webpage",
   "version": "1.0.0",
-  "description": "megakit free multipurpose template",
-  "author": "Themefisher",
+  "description": "Accounting Services Webpage",
+  "author": "MIchael-Narvaez",
   "license": "MIT",
   "scripts": {
     "dev": "gulp",
