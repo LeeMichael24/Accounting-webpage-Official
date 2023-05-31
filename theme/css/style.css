@@ -24,6 +24,15 @@ html {
   line-height : 80px;
 }
 
+@media screen and (max-width: 600px) {
+  .sec-maintaining {
+    height: 90vh;
+    font-size:50px;
+    justify-content: center;
+    text-align: center;
+    padding: 3rem;
+  }
+}
 /* Maintaining page end*/
 
 
