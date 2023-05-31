@@ -1,0 +1,4 @@
+[build]
+publish = "source"
+command = "npm run dev"
+
