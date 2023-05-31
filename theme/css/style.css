@@ -17,7 +17,7 @@ html {
   padding: 3rem;
 }
 .sec-maintaining > div {
-  margin-top: 150px;
+  margin-top: 50px;
   line-height : 25px;
 }
 .maintaining-font {
@@ -26,11 +26,16 @@ html {
 
 @media screen and (max-width: 600px) {
   .sec-maintaining {
-    height: 90vh;
-    font-size:50px;
+    height: 60vh;
+    font-size:40px;
     justify-content: center;
     text-align: center;
     padding: 3rem;
+  }
+
+  .sec-maintaining > div {
+    margin-top: 10px;
+    line-height : 25px;
   }
 }
 /* Maintaining page end*/
