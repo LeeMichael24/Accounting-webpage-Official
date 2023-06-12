@@ -107,7 +107,7 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 }
 .form-control:focus {
   box-shadow: none;
-  border: 1px solid rgb(247, 87, 87);
+  border: 1px solid #1C587B;
 }
 
 .py-7 {
@@ -135,33 +135,33 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 }
 
 .btn-main, .btn-small, .btn-transparent {
-  background: rgb(247, 87, 87);
+  background: #1C587B;
   color: #fff;
   transition: all 0.2s ease;
 }
 .btn-main:hover, .btn-small:hover, .btn-transparent:hover {
-  background: #f52626;
+  background: #176ea1;
   color: #fff;
 }
 
 .btn-solid-border {
-  border: 2px solid rgb(247, 87, 87);
+  border: 2px solid #1C587B;
   background: transparent;
   color: #242424;
 }
 .btn-solid-border:hover {
-  border: 2px solid rgb(247, 87, 87);
-  background: rgb(247, 87, 87);
+  border: 2px solid #1C587B;
+  background: #1C587B;
 }
 
 .btn-transparent {
   background: transparent;
   padding: 0;
-  color: rgb(247, 87, 87);
+  color: #1C587B;
 }
 .btn-transparent:hover {
   background: transparent;
-  color: rgb(247, 87, 87);
+  color: #1C587B;
 }
 
 .btn-large {
@@ -195,7 +195,7 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 }
 
 .bg-primary {
-  background: rgb(247, 87, 87);
+  background: #1C587B;
 }
 
 .bg-primary-dark {
@@ -321,9 +321,14 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 }
 
 .subtitle {
-  color: rgb(247, 87, 87);
+  color: #1C587B;
   font-size: 14px;
   letter-spacing: 1px;
+}
+
+/* section de home banner */
+.slider {
+  height: 90vh;
 }
 
 .overly, .hero-img, .cta, .slider, .page-title {
@@ -358,7 +363,7 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 }
 
 .text-color {
-  color: rgb(247, 87, 87);
+  color: #1C587B;
 }
 
 .text-black {
@@ -396,7 +401,7 @@ a {
 }
 
 a:focus, a:hover {
-  color: rgb(247, 87, 87);
+  color: #1C587B;
   text-decoration: none;
 }
 
@@ -486,8 +491,8 @@ a:focus {
 }
 
 #navbar {
-  background: rgb(34, 35, 40);
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  background: rgb(255, 255, 255);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 #navbar li {
   padding-left: 15px;
@@ -497,10 +502,12 @@ a:focus {
     padding-left: 0;
   }
 }
+
+/* color links tabs pages navbar header */
 #navbar .nav-link {
   font-family: "Poppins", sans-serif;
   font-weight: 500;
-  color: #fff;
+  color: #0b202c;
   text-transform: uppercase;
   font-size: 14px;
   letter-spacing: 0.5px;
@@ -508,9 +515,15 @@ a:focus {
 }
 #navbar .nav-link:hover, #navbar .nav-link:focus,
 #navbar .active .nav-link {
-  color: rgb(247, 87, 87);
+  color: #1C587B;
 }
+
+/* navbar letras Contact us */
 #navbar .btn {
+  padding: 0.7rem 1.5rem 0.5rem;
+  color: #0b202c;
+}
+#navbar .btn:hover {
   padding: 0.7rem 1.5rem 0.5rem;
   color: #fff;
 }
@@ -539,14 +552,15 @@ a:focus {
   padding: 0 8px;
 }
 .header-top .header-top-socials a:hover {
-  color: rgb(247, 87, 87);
+  color: #1C587B;
+;
 }
 .header-top .header-top-info {
-  color: #919194;
+  color: #fff;
   font-size: 16px;
 }
 .header-top .header-top-info a span {
-  color: #fff;
+  color: #1C587B;
 }
 .header-top .header-top-info a {
   margin-left: 35px;
@@ -556,20 +570,22 @@ a:focus {
 .navbar-toggler {
   padding: 0;
   font-size: 1.5rem;
-  color: #fff;
+  color: #000000;
 }
 .navbar-toggler:focus {
   outline: 0;
 }
 
+/* button de logo letras header navbar */
 .navbar-brand {
-  color: #fff;
+  color: #0b202c;
   font-weight: 600;
   letter-spacing: 1px;
 }
-.navbar-brand span {
-  color: rgb(247, 87, 87);
+.navbar-brand a {
+  color: #fff;
 }
+
 
 .dropdown-menu {
   padding: 0px;
@@ -635,7 +651,7 @@ a:focus {
 .dropdown-submenu:hover > .dropdown-item,
 .dropdown-item.active,
 .dropdown-item:hover {
-  background: rgb(247, 87, 87);
+  background: #1C587B;
   color: #fff;
 }
 
@@ -713,7 +729,7 @@ ul.dropdown-menu li {
 }
 
 .color-one {
-  color: rgb(247, 87, 87);
+  color: #1C587B;
 }
 
 .color-two {
@@ -902,7 +918,7 @@ ul.dropdown-menu li {
   border-color: #dedede;
 }
 .pricing .btn-solid-border:Hover {
-  border-color: rgb(247, 87, 87);
+  border-color: #1C587B;
 }
 
 .portflio-item .portfolio-item-content {
@@ -944,7 +960,7 @@ ul.dropdown-menu li {
   align-items: center;
   justify-content: center;
   font-size: 80px;
-  color: rgb(247, 87, 87);
+  color: #1C587B;
   opacity: 0;
   transition: all 0.35s ease;
 }
@@ -1009,7 +1025,7 @@ ul.dropdown-menu li {
   transition: all 0.4s ease 0s;
 }
 .blog-item-content h3 a:hover {
-  color: rgb(247, 87, 87) !important;
+  color: #1C587B !important;
 }
 
 .lh-36 {
@@ -1062,7 +1078,7 @@ h3.quote::before {
   content: "";
   width: 55px;
   height: 2px;
-  background: rgb(247, 87, 87);
+  background: #1C587B;
   position: absolute;
   top: 25px;
   left: 0;
@@ -1135,7 +1151,7 @@ h3.quote::before {
   font-weight: 500;
 }
 .post-comments .comment-author a {
-  color: rgb(247, 87, 87);
+  color: #1C587B;
   font-size: 14px;
   text-transform: uppercase;
 }
@@ -1146,7 +1162,7 @@ h3.quote::before {
   font-size: 12px;
 }
 .post-comments .comment-button {
-  color: rgb(247, 87, 87);
+  color: #1C587B;
   display: inline-block;
   margin-left: 5px;
   font-size: 12px;
@@ -1156,7 +1172,7 @@ h3.quote::before {
   display: inline-block;
 }
 .post-comments .comment-button:hover {
-  color: rgb(247, 87, 87);
+  color: #1C587B;
 }
 
 .post-excerpt {
@@ -1174,7 +1190,7 @@ h3.quote::before {
 .post-excerpt blockquote.quote-post p {
   line-height: 30px;
   font-size: 20px;
-  color: rgb(247, 87, 87);
+  color: #1C587B;
 }
 
 .single-blog {
@@ -1201,7 +1217,7 @@ h3.quote::before {
   color: #000;
 }
 .next-prev a:hover {
-  color: rgb(247, 87, 87);
+  color: #1C587B;
 }
 .next-prev .prev-post i {
   margin-right: 10px;
@@ -1220,7 +1236,7 @@ h3.quote::before {
   font-size: 16px;
 }
 .social-profile ul li a i:hover {
-  color: rgb(247, 87, 87);
+  color: #1C587B;
 }
 
 .comments-section {
@@ -1264,7 +1280,7 @@ h3.quote::before {
   margin-bottom: 8px;
 }
 .comment-wrap .media .media-heading a {
-  color: rgb(247, 87, 87);
+  color: #1C587B;
   font-size: 13px;
 }
 .comment-wrap .media .comment-meta {
@@ -1285,7 +1301,7 @@ h3.quote::before {
 }
 .comment-reply-form input:focus, .comment-reply-form textarea:focus {
   box-shadow: none;
-  border: 1px solid rgb(247, 87, 87);
+  border: 1px solid #1C587B;
 }
 .comment-reply-form textarea, .comment-reply-form .btn-main, .comment-reply-form .btn-transparent, .comment-reply-form .btn-small {
   height: auto;
@@ -1326,7 +1342,7 @@ h3.quote::before {
   padding-right: 10px;
 }
 .widget.widget-category ul li a:hover {
-  color: rgb(247, 87, 87);
+  color: #1C587B;
   padding-left: 5px;
 }
 .widget.widget-tag ul li {
@@ -1345,8 +1361,8 @@ h3.quote::before {
 }
 .widget.widget-tag ul li a:hover {
   color: #fff;
-  background: rgb(247, 87, 87);
-  border: 1px solid rgb(247, 87, 87);
+  background: #1C587B;
+  border: 1px solid #1C587B;
 }
 
 
@@ -1367,7 +1383,7 @@ h3.quote::before {
   letter-spacing: 1px;
 }
 .logo span {
-  color: rgb(247, 87, 87);
+  color: #1C587B;
 }
 
 .sub-form {
@@ -1393,7 +1409,7 @@ h3.quote::before {
   z-index: 999;
   height: 40px;
   width: 40px;
-  background: rgb(247, 87, 87);
+  background: #1C587B;
   border-radius: 50%;
   text-align: center;
   line-height: 43px;
@@ -1435,7 +1451,7 @@ h3.quote::before {
 }
 @media (max-width: 768px) {
   .navbar-toggler {
-    color: #fff;
+    color: #000000;
   }
   .bg-about {
     display: none;
@@ -1458,7 +1474,7 @@ h3.quote::before {
     margin-right: 10px;
   }
   .navbar-toggler {
-    color: #fff;
+    color: #000000;
   }
   .slider .block h1 {
     font-size: 38px;
@@ -1490,7 +1506,7 @@ h3.quote::before {
     display: block;
   }
   .navbar-toggler {
-    color: #fff;
+    color: #000000;
   }
   .content-title {
     font-size: 28px;
