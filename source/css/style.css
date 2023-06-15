@@ -1453,6 +1453,9 @@ h3.quote::before {
   .navbar-toggler {
     color: #000000;
   }
+  .col-sm-6{
+    margin: 0 auto;
+  }
   .bg-about {
     display: none;
   }

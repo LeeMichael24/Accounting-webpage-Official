@@ -1,5 +1,5 @@
 {
-  "name": "Accounting-Webpage",
+  "name": "q",
   "version": "1.0.0",
   "description": "Accounting Services Webpage",
   "author": "MIchael-Narvaez",
@@ -9,14 +9,16 @@
     "build": "gulp build"
   },
   "dependencies": {
+    "bootstrap-icons": "^1.10.5",
     "browser-sync": "^2.27.10",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^8.0.0",
     "gulp-file-include": "^2.3.0",
+    "gulp-header-comment": "^0.10.0",
     "gulp-rimraf": "^1.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^3.0.0",
-    "gulp-header-comment": "^0.10.0",
-    "sass": "^1.52.3"
+    "sass": "^1.52.3",
+    "vinyl": "^3.0.0"
   }
 }
