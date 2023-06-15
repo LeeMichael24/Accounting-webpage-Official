@@ -654,6 +654,15 @@ a:focus {
   background: #1C587B;
   color: #fff;
 }
+/* this part is above the footer */
+@media (max-width: 700px) {
+  
+  #cont-form-footer > div{
+    justify-content: center;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
 
 ul.dropdown-menu li {
   padding-left: 0px !important;
