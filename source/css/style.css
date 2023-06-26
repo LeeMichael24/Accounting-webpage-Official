@@ -752,6 +752,19 @@ ul.dropdown-menu li {
 .color-four {
   color: #088ed3;
 }
+.about-sec-gap{
+  margin: 2.5rem;
+  margin-top: -170px;
+}
+
+.about-sec-gap-1 {
+  margin: 2rem;
+  margin-top: -30px
+}
+
+.about-sec-top{
+  margin-top: -30px;
+}
 
 .bg-about {
   position: absolute;
@@ -1374,6 +1387,9 @@ h3.quote::before {
   border: 1px solid #1C587B;
 }
 
+.footer-bg-full{
+  background-color: #fff;
+}
 
 .footer {
   padding-bottom: 10px;
@@ -1549,4 +1565,80 @@ h3.quote::before {
 }
 /*# sourceMappingURL=style.css.map */
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* CSS */
+.button-85 {
+  padding: 0.6em 2em;
+  border: none;
+  outline: none;
+  color: rgb(0, 0, 0);
+  background: #ffffff;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 20px;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-85:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #261e92,
+    #20809d,
+    #136f8b,
+    #2b6fbe,
+    #00ffd5,
+    #002bff
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing-button-85 20s linear infinite;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+@keyframes glowing-button-85 {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.button-85:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  left: 0;
+  top: 0;
+  border-radius: 20px;
+}
 
