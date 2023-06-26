@@ -1615,7 +1615,7 @@ h3.quote::before {
   height: calc(100% + 4px);
   animation: glowing-button-85 20s linear infinite;
   transition: opacity 0.3s ease-in-out;
-  border-radius: 20px;
+  border-radius: 30px;
 }
 
 @keyframes glowing-button-85 {
