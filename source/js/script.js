@@ -130,27 +130,3 @@ function myFunction() {
 
 
 
-document.addEventListener("DOMContentLoaded", function() {
-	var menuItems = document.querySelectorAll(".my-menu li");
-	for (var i = 0; i < menuItems.length; i++) {
-	  menuItems[i].addEventListener("click", function() {
-		var submenu = this.querySelector(".my-submenu");
-		if (submenu) {
-		  if (submenu.style.display === "block") {
-			submenu.style.display = "none";
-		  } else {
-			closeAllSubmenus();
-			submenu.style.display = "block";
-		  }
-		}
-	  });
-	}
-  
-	function closeAllSubmenus() {
-	  var submenus = document.querySelectorAll(".my-submenu");
-	  for (var i = 0; i < submenus.length; i++) {
-		submenus[i].style.display = "none";
-	  }
-	}
-  });
-  
