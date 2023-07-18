@@ -693,10 +693,23 @@ ul.dropdown-menu li {
     opacity: 1;
   }
 }
-.bg-1 {
-  background: url("../images/bg/home-2.jpg") no-repeat 50% 50%;
+
+
+/* Images from tabs */
+.bg-1-WhoWeAre {
+  background: url("../images/Categories-tabs/WhoWeAre.jpg") no-repeat 50% 50%;
   background-size: cover;
 }
+.bg-1-WhatWeDo{
+  background: url("../images/Categories-tabs/service-2.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+.bg-1-WhoWeServe{
+  background: url("../images/Categories-tabs/WhoWeServe.jpg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+
 
 .bg-2 {
   background: url("../images/bg/home-5.jpg");
