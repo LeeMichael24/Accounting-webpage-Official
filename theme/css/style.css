@@ -708,6 +708,10 @@ ul.dropdown-menu li {
   background: url("../images/Categories-tabs/WhoWeServe.jpg") no-repeat 50% 50%;
   background-size: cover;
 }
+.bg-1-ContactUs{
+  background: url("../images/Categories-tabs/contact-1.jpg") no-repeat 80% 80%;
+  background-size: cover;
+}
 
 
 
@@ -1662,7 +1666,9 @@ h3.quote::before {
 
 
 
+/* Sidebar menu */
 
+/* END Sidebar menu */
 
 
 

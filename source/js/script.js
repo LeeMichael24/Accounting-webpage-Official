@@ -92,14 +92,14 @@
 	// Counter
 	if ($('.counter-stat').length !== 0) {
 		$('.counter-stat').counterUp({
-			delay: 10,
-			time: 1000
+			delay: 40,
+			time: 1900
 		});
 	}
 
 })(jQuery);
 
-
+//Escribir automatico en home palabra "Experience"
 const typed = new Typed ('.typed', {
 	strings: ['Experience'],
 	typeSpeed: 95,
@@ -120,7 +120,7 @@ var sticky = navbar.offsetTop;
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function myFunction() {
-  if (window.pageYOffset >= sticky) {
+  if (window.scrollY >= sticky) {
     navbar.classList.add("sticky")
   } else {
     navbar.classList.remove("sticky");
@@ -130,3 +130,7 @@ function myFunction() {
 
 
 
+/* Sidebar menu */
+
+
+/* END Sidebar menu */
