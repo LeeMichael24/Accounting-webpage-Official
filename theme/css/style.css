@@ -328,7 +328,23 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 
 /* section de home banner */
 .slider {
-  height: 90vh;
+  height: 100vh;
+}
+
+@media (max-width: 1920px) {
+  .slider{
+    height: 100%;
+  }
+}
+@media (max-width: 992px) {
+  .slider{
+    height: 100vh;
+  }
+}
+@media (max-width: 1440px) {
+  .slider{
+    height: 90.5vh;
+  }
 }
 
 .overly, .hero-img, .cta, .slider, .page-title {
@@ -1744,10 +1760,248 @@ h3.quote::before {
   }
 }
 
-
-
-
 /* END Sidebar menu */
 
+/* <!-- Who We Serve --> */
+.accounting-solutions {
+  justify-content: center;
+  margin: 0 auto;
+align-items: center;
+  padding: 40px;
+  padding-top: 60px;
+}
+
+.section-title {
+  font-size: 34px;
+  margin-bottom: 20px;
+  box-shadow: #000;
+}
+
+.section-description {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 20px;
+}
+
+.image-item {
+  width: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.grid-image {
+  width: 100%;
+  height: auto;
+}
+
+.image-caption {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.highlight {
+  font-weight: bold;
+}
+
+/* <!-- END Who We Serve --> */
 
 
+.accounting-solutions .section-title,
+.accounting-solutions .section-description,
+.accounting-solutions .image-item {
+  opacity: 0;
+}
+
+.accounting-solutions .animate {
+  animation-fill-mode: forwards;
+}
+
+.accounting-solutions .section-title.animate {
+  animation: slideFromLeft 1.5s ease-in-out forwards;
+}
+
+.accounting-solutions .section-description.animate {
+  animation: fadeIn 4s ease-in-out forwards;
+}
+
+.accounting-solutions .image-item.animate {
+  animation: slideFromTop 5s ease-in-out forwards;
+}
+
+@keyframes slideFromLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(50%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* About css */
+.section.about {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 4s ease, transform 4s ease;
+}
+
+.section.about.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section.about .about-item {
+  position: relative;
+  z-index: 2;
+}
+
+.section.about .content-title {
+  font-size: 36px;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 3s ease, transform 3s ease;
+}
+
+.section.about .about-content {
+  margin-top: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.section.about .about-content h4 {
+  font-size: 24px;
+  font-weight: bold;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.section.about .about-content p {
+  margin-bottom: 20px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.section.about .btn-main {
+  margin-top: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.section.about .image-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+.section.about .image-item:nth-child(1) {
+  transition-delay: 1s;
+}
+
+.section.about .image-item:nth-child(2) {
+  transition-delay: 1s;
+}
+
+.section.about .image-item:nth-child(3) {
+  transition-delay: 1s;
+}
+
+.section.about.animate .content-title,
+.section.about.animate .about-content,
+.section.about.animate h4,
+.section.about.animate p,
+.section.about.animate .btn-main,
+.section.about.animate .image-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* About css */
+
+
+/* Who We Serve */
+.section.intro {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 4s ease, transform 4s ease;
+}
+
+.section.intro.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.section.intro .section-title {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.section.intro .content-title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.section.intro .intro-item {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease, transform 2s ease;
+}
+
+.section.intro .intro-item:nth-child(1) {
+  transition-delay: 0.3s;
+}
+
+.section.intro .intro-item:nth-child(2) {
+  transition-delay: 0.4s;
+}
+
+.section.intro .intro-item:nth-child(3) {
+  transition-delay: 0.5s;
+}
+
+.section.intro .intro-item:nth-child(4) {
+  transition-delay: 0.6s;
+}
+
+.section.intro.animate .section-title,
+.section.intro.animate .intro-item {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* END Who We Serve */

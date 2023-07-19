@@ -130,7 +130,50 @@ function myFunction() {
 
 
 
-/* Sidebar menu */
+/* About effect */
+// Get the target section
+const targetSection = document.querySelector('.about');
 
 
-/* END Sidebar menu */
+// Create a new Intersection Observer
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      // Add animation class when the section is in view
+      entry.target.classList.add('animate');
+      // Stop observing once animation is triggered
+      observer.unobserve(entry.target);
+    }
+  });
+});
+
+// Start observing the target section
+observer.observe(targetSection);
+
+
+/* END About effect */
+
+const introSection = document.querySelector('.intro');
+const sectionTitle = introSection.querySelector('.section-title');
+const contentTitle = introSection.querySelector('.content-title');
+const introItems = introSection.querySelectorAll('.intro-item');
+
+const observer1 = new IntersectionObserver((entries, observer1) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      introSection.classList.add('animate');
+      sectionTitle.style.opacity = 1;
+      sectionTitle.style.transform = 'translateY(0)';
+      contentTitle.style.opacity = 1;
+      contentTitle.style.transform = 'translateY(0)';
+      introItems.forEach((item, index) => {
+        item.style.opacity = 1;
+        item.style.transform = 'translateY(0)';
+        item.style.transitionDelay = `${index * 7}s`;
+      });
+      observer1.unobserve(entry.target);
+    }
+  });
+});
+
+observer.observe(introSection);
