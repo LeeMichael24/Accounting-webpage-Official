@@ -12,7 +12,7 @@
 			dots: true,
 			arrows: false,
 			autoplay: true,
-			autoplaySpeed: 3000,
+			autoplaySpeed: 3500,
 			responsive: [{
 					breakpoint: 1024,
 					settings: {
@@ -169,7 +169,7 @@ const observer1 = new IntersectionObserver((entries, observer1) => {
       introItems.forEach((item, index) => {
         item.style.opacity = 1;
         item.style.transform = 'translateY(0)';
-        item.style.transitionDelay = `${index * 7}s`;
+        item.style.transitionDelay = `${index * 25}s`;
       });
       observer1.unobserve(entry.target);
     }
@@ -177,3 +177,8 @@ const observer1 = new IntersectionObserver((entries, observer1) => {
 });
 
 observer.observe(introSection);
+
+
+
+/* Carrousel */
+

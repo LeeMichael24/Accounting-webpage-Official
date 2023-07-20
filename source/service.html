@@ -164,10 +164,10 @@
   <section class="main-container d-flex">
     <div id="sidebar">
       <ul>
-        <li><a class="active" href="#" onclick="cargarServicio('service1.html')">Bookkeeping</a></li>
-        <li><a class="" href="#" onclick="cargarServicio('service2.html')">Payroll</a></li>
-        <li><a class="" href="#" onclick="cargarServicio('service3.html')">Sales & Use Tax</a></li>
-        <li><a class="" href="#" onclick="cargarServicio('service4.html')">Accounts Payable</a></li>
+        <li class="active"><a href="#" onclick="cargarServicio('service1.html')">Bookkeeping</a></li>
+        <li class=""><a href="#" onclick="cargarServicio('service2.html')">Payroll</a></li>
+        <li class=""><a href="#" onclick="cargarServicio('service3.html')">Sales & Use Tax</a></li>
+        <li class=""><a href="#" onclick="cargarServicio('service4.html')">Accounts Payable</a></li>
         <li><a class="" href="#" onclick="cargarServicio('service5.html')">Business Income Tax</a></li>
         <li><a class="" href="#" onclick="cargarServicio('service6.html')">Outsourced CFO</a></li>
         <li><a class="" href="#" onclick="cargarServicio('service7.html')">Business Foundation Services</a></li>
@@ -182,6 +182,11 @@
   </section>
   
   <script>
+    // Esta función se ejecuta al cargar la página para mostrar el servicio 1 por defecto
+    document.addEventListener("DOMContentLoaded", function() {
+      cargarServicio('service1.html');
+    });
+  
     function cargarServicio(url) {
       var contenedorInformacion = document.getElementById("iframe-servicio");
   
@@ -193,7 +198,21 @@
         }
       };
       xhr.send();
+  
+      // Remover la clase "active" de todos los elementos de la lista
+      var listaServicios = document.querySelectorAll("#sidebar ul li");
+      listaServicios.forEach(function(servicio) {
+        servicio.classList.remove("active");
+      });
+  
+      // Agregar la clase "active" al elemento seleccionado
+      var servicioSeleccionado = event.target.parentElement;
+      servicioSeleccionado.classList.add("active");
     }
+    $("#sidebar ul li a").on('click', function () {
+      $("#sidebar ul li.active").removeClass('active');
+      $(this).addClass('active');
+    })
   </script>
   
 
@@ -205,8 +224,8 @@
 
 
   <!--  Section Services Start -->
-  <section class="section service border-top pb-5">
-    <!-- <div class="container">
+  <!-- <section class="section service border-top pb-5">
+    <div class="container">
 		<div class="row justify-content-center">
 			<div class="col-lg-7 text-center">
 				<div class="section-title">
@@ -289,12 +308,12 @@
 				</div>
 			</div>
 		</div>
-	</div> -->
-  </section>
+	</div>
+  </section> -->
   <!--  Section Services End -->
 
   <section class="cta-2">
-    <!-- 	<div class="container">
+    	<div class="container">
 		<div class="cta-block p-5 rounded">
 			<div class="row justify-content-center align-items-center ">
 				<div class="col-lg-7 text-center text-lg-left">
@@ -302,48 +321,48 @@
 					<h2 class="mt-2 text-white">Entrust Your Project to Our Best Team of Professionals</h2>
 				</div>
 				<div class="col-lg-4 text-center text-lg-right mt-4 mt-lg-0">
-					<a href="contact.html" class="btn btn-main btn-round-full">Contact Us</a>
+					<a href="contact.html" class="button-85" role="button">Contact Us</a>
 				</div>
 			</div>
 		</div>
-	</div> -->
+	</div>
   </section>
 
-  <footer class="footer section" style="background: #cccc">
+  <footer id="footer-color-bg-full" class="footer section" style="background: #242424">
     <div class="container">
       <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6 text-center">
           <div class="widget">
-            <h4 class="text-capitalize mb-4">Company</h4>
+            <h4 class="text-capitalize mb-4 text-white">Company</h4>
 
             <ul class="list-unstyled footer-menu lh-35">
-              <li><a href="about.html">Terms & Conditions</a></li>
-              <li><a href="about.html">Privacy Policy</a></li>
-              <li><a href="cobtact.html">Support</a></li>
-              <li><a href="cobtact.html">FAQ</a></li>
+              <li><a href="about.html" class="text-white">Terms & Conditions</a></li>
+              <li><a href="about.html" class="text-white">Privacy Policy</a></li>
+              <li><a href="#" class="text-white">Support</a></li>
+              <li><a href="#" class="text-white">FAQ</a></li>
             </ul>
           </div>
         </div>
         <div class="col-lg-2 col-md-6 col-sm-6 text-center">
           <div class="widget">
-            <h4 class="text-capitalize mb-4">Quick Links</h4>
+            <h4 class="text-capitalize mb-4 text-white">Quick Links</h4>
 
             <ul class="list-unstyled footer-menu lh-35">
-              <li><a href="about.html">About</a></li>
-              <li><a href="service.html">Services</a></li>
-              <li><a href="blog-grid.html">Blogs</a></li>
-              <li><a href="contact.html">Contact</a></li>
+              <li><a href="about.html" class="text-white">About</a></li>
+              <li><a href="service.html" class="text-white">Services</a></li>
+              <!-- <li><a href="blog-grid.html">Blogs</a></li> -->
+              <li><a href="contact.html" class="text-white">Contact</a></li>
             </ul>
           </div>
         </div>
 
-        <div class="col-lg-3 col-sm-6 text-center">
+        <div class="col-lg-4 col-sm-6 text-center">
           <div class="widget">
-            <div class="logo mb-4">
-              <h3>Accounting<span>Services</span></h3>
+            <div class="logo mb-4 text-white">
+              <h3>SBM <span>Consulting</span> CPA</h3>
             </div>
-            <h6><a href="mailto:support@gmail.com">Support@AccountingServices.com</a></h6>
-            <a href="tel:+23-345-67890"><span class="text-color h4">+23-456-6588</span></a>
+            <h6><a href="mailto:support@gmail.com" class="text-white">sbmconsulting2018@gmail.com</a></h6>
+            <a href="tel:+23-345-67890"><span class="text-color h4 ">+23-456-6588</span></a>
           </div>
         </div>
       </div>
@@ -351,19 +370,19 @@
       <div class="footer-btm pt-4">
         <div class="row">
           <div class="col-lg-6">
-            <div class="copyright">
-              Copyright &copy; 2023, Designed &amp; Developed by <a href="https://github.com/LeeMichael24">Michael
+            <div class="copyright text-white">
+              Copyright &copy; 2023, Designed &amp; Developed by <a href="https://github.com/LeeMichael24" class="text-white">Michael
                 Narvaez</a>
             </div>
           </div>
           <div class="col-lg-6 text-left text-lg-right">
             <ul class="list-inline footer-socials">
-              <li class="list-inline-item"><a href="https://www.facebook.com"><i
-                    class="fab fa-facebook-f mr-2"></i>Facebook</a></li>
-              <li class="list-inline-item"><a href="https://twitter.com"><i class="fab fa-twitter mr-2"></i>Twitter</a>
+              <li class="list-inline-item"><a href="https://www.facebook.com" class="text-white"><i
+                    class="fab fa-facebook-f mr-2 text-white"></i>Facebook</a></li>
+              <li class="list-inline-item "><a href="https://twitter.com" class="text-white"><i class="fab fa-twitter mr-2 text-white"></i>Twitter</a>
               </li>
-              <li class="list-inline-item"><a href="https://www.pinterest.com"><i
-                    class="fab fa-pinterest-p mr-2 "></i>Pinterest</a></li>
+              <li class="list-inline-item"><a href="https://www.pinterest.com" class="text-white"><i
+                    class="fab fa-instagram mr-2 text-white"></i>Instagram</a></li>
             </ul>
           </div>
         </div>
@@ -394,12 +413,7 @@ Essential Scripts
   <script src="plugins/counterup/jquery.counterup.min.js"></script>
 
   <script src="js/script.js"></script>
-  <script>
-    $("#sidebar ul li a").on('click', function () {
-      $("#sidebar ul li.active").removeClass('active');
-      $(this).addClass('active');
-    })
-  </script>
+
 
 </body>
 

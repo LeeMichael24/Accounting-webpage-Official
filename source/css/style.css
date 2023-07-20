@@ -798,6 +798,7 @@ ul.dropdown-menu li {
 
 .about-sec-top{
   margin-top: -30px;
+  margin-bottom: -60px;
 }
 
 .bg-about {
@@ -1027,6 +1028,7 @@ ul.dropdown-menu li {
 .contact-form-wrap .form-group {
   padding-bottom: 15px;
   margin: 0px;
+
 }
 .contact-form-wrap .form-group .form-control {
   background: #f5f8f9;
@@ -1705,6 +1707,14 @@ h3.quote::before {
 #sidebar li {
   margin-bottom: 10px;
 }
+#sidebar li.active {
+  background: white;
+  border-radius: 8px;
+}
+#sidebar li.active a, #sidebar li.acttive a:hover {
+  background: white;
+  border-radius: 8px;
+}
 
 #sidebar a {
   text-decoration: none;
@@ -1767,7 +1777,7 @@ h3.quote::before {
 .accounting-solutions {
   justify-content: center;
   margin: 0 auto;
-align-items: center;
+  align-items: center;
   padding: 40px;
   padding-top: 60px;
 }
@@ -1957,7 +1967,7 @@ align-items: center;
 .section.intro {
   opacity: 0;
   transform: translateY(50px);
-  transition: opacity 4s ease, transform 4s ease;
+  transition: opacity 6s ease, transform 6s ease;
 }
 
 .section.intro.animate {
@@ -2006,3 +2016,6 @@ align-items: center;
 
 
 /* END Who We Serve */
+
+
+/* END Carrousel */
