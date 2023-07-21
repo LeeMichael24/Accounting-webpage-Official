@@ -1685,93 +1685,7 @@ h3.quote::before {
 
 
 
-/* Sidebar menu */
-.main-container{
-  padding: 5rem;
-  width: 100%;
-  height: 100vh;
 
-}
-#sidebar {
-  width: 370px;
-  background-color: #f1f1f1;
-  padding: 10px;
-}
-
-#sidebar ul {
-  list-style-type: none;
-  padding: 1rem;
-
-}
-
-#sidebar li {
-  margin-bottom: 10px;
-}
-#sidebar li.active {
-  background: white;
-  border-radius: 8px;
-}
-#sidebar li.active a, #sidebar li.acttive a:hover {
-  background: white;
-  border-radius: 8px;
-}
-
-#sidebar a {
-  text-decoration: none;
-  color: #2b6cb0;
-  display: block;
-  padding: 5px;
-  border-radius: 5px;
-  margin-left: 10px;
-  font-weight: 600;
-  font-size: 20px;
-}
-
-#sidebar a:hover {
-  background-color: white;
-}
-
-#informacion-servicio {
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem;
-}
-#iframe-servicio{
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  margin: 0 auto;
-  background-color: white;
-  border-radius: 5px;
-}
-
-.dropdown-content {
-  display: none;
-}
-
-.dropdown-content.show {
-  display: block;
-}
-
-@media (max-width: 768px) {
-  .dropdown-button {
-    display: block;
-    width: 100%;
-    text-align: center;
-  }
-  
-  .dropdown-content {
-    position: static;
-    display: block;
-    margin-top: 10px;
-  }
-}
-
-/* END Sidebar menu */
 
 /* <!-- Who We Serve --> */
 .accounting-solutions {
@@ -2019,3 +1933,202 @@ h3.quote::before {
 
 
 /* END Carrousel */
+
+/* Sidebar menu none */
+/* Desktop */
+/* Sidebar menu */
+.main-container{
+  padding: 5rem;
+  width: 100%;
+  height: 100vh;
+
+}
+#sidebar {
+  width: 370px;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+#sidebar ul {
+  list-style-type: none;
+  padding: 1rem;
+
+}
+
+#sidebar li {
+  margin-bottom: 10px;
+}
+#sidebar li.active {
+  background: white;
+  border-radius: 8px;
+}
+#sidebar li.active a, #sidebar li.acttive a:hover {
+  background: white;
+  border-radius: 8px;
+}
+
+#sidebar a {
+  text-decoration: none;
+  color: #2b6cb0;
+  display: block;
+  padding: 5px;
+  border-radius: 5px;
+  margin-left: 10px;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+#sidebar a:hover {
+  background-color: white;
+}
+
+#informacion-servicio {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+#iframe-servicio{
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: white;
+  border-radius: 5px;
+}
+
+
+/* END Sidebar menu */
+
+/* Mobile */
+@media (max-width: 768px) {
+  /* Ocultar el menú de escritorio en dispositivos móviles */
+  .main-container {
+    flex-direction: column;
+    padding: 0;
+    padding-top: 60px;
+  }
+  .desktop-menu {
+    display: block;
+    margin-bottom: 10px;
+  }
+  #sidebar{
+    display: none;
+  }
+
+  .dropdown-button {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  .dropdown-button i {
+    margin-left: 25px;
+  }
+
+  .mobile-menu {
+    display: relative;
+    padding: 1rem;
+    list-style: none;
+  }
+
+  .dropdown-content {
+    margin-top: 1.9rem;
+    padding: 1.5rem;
+    width: 91%;
+    list-style: none;
+    background-color: black;
+    margin-left: 16px;
+  }
+
+  .dropdown-content li a {
+    display: block;
+    padding: 5px 0;
+    margin-left: 10px;
+    text-decoration: none;
+    color: #2b6cb0;
+    font-weight: bold;
+  }
+  .dropdown-content li:hover {
+    background-color: white;
+  }
+  .dropdown-content.open{
+    display: block;
+  }
+  .mobile-section{
+    flex-direction: column;
+  }
+  .mobile-section > * {
+    width: 100%;
+  }
+  
+  /* Mostrar el dropdown menu en dispositivos móviles */
+  .dropdown.open .dropdown-content {
+    display: block;
+  }
+
+  /* Estilos adicionales para ocupar todo el ancho de la pantalla */
+  .mobile-section {
+    flex-direction: column;
+  }
+  
+  .mobile-section > * {
+    width: 100%;
+  }
+  .mobile-menu{
+    display: flex;
+  }
+
+
+
+}
+
+/* Estilos para dispositivos con ancho mínimo de 693px */
+@media (min-width: 770px) {
+  /* Ocultar el menú móvil en dispositivos de escritorio */
+  .mobile-menu {
+    display: none;
+  }
+  
+  /* Mostrar el menú de escritorio en dispositivos de escritorio */
+  .desktop-menu {
+    display: block;
+  }
+}
+
+/* Estilos del Mobile Dropdown Menu */
+@media (max-width: 768px) {
+  /* ... (otros estilos) ... */
+  
+  /* Estilos del Mobile Dropdown Menu */
+  .mobile-menu {
+    display: block;
+    margin-bottom: 10px;
+    position: relative; /* Permite posicionar el dropdown por encima de otros elementos */
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute; /* Posiciona el dropdown en relación al contenedor padre */
+    top: 30px; /* Ajusta la distancia entre el botón y el menú desplegable */
+    left: 0; /* Ajusta la alineación del dropdown respecto al botón */
+    background-color: #f1f1f1; /* Color de fondo del dropdown */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* Sombra del dropdown */
+    z-index: 1; /* Asegura que el dropdown esté por encima de otros elementos */
+  }
+
+  .dropdown.open .dropdown-content {
+    display: block;
+  }
+}
+/* ... (otros estilos) ... */
+
+
+/* END Sidebar menu none */

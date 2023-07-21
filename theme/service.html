@@ -161,25 +161,45 @@
 
 
   <!-- Sidebar nav -->
+  <!-- Desktop -->
   <section class="main-container d-flex">
+    <!-- Desktop Sidebar Menu -->
     <div id="sidebar">
-      <ul>
+      <ul class="desktop-menu">
         <li class="active"><a href="#" onclick="cargarServicio('service1.html')">Bookkeeping</a></li>
-        <li class=""><a href="#" onclick="cargarServicio('service2.html')">Payroll</a></li>
-        <li class=""><a href="#" onclick="cargarServicio('service3.html')">Sales & Use Tax</a></li>
-        <li class=""><a href="#" onclick="cargarServicio('service4.html')">Accounts Payable</a></li>
-        <li><a class="" href="#" onclick="cargarServicio('service5.html')">Business Income Tax</a></li>
-        <li><a class="" href="#" onclick="cargarServicio('service6.html')">Outsourced CFO</a></li>
-        <li><a class="" href="#" onclick="cargarServicio('service7.html')">Business Foundation Services</a></li>
+        <li><a href="#" onclick="cargarServicio('service2.html')">Payroll</a></li>
+        <li><a href="#" onclick="cargarServicio('service3.html')">Sales & Use Tax</a></li>
+        <li><a href="#" onclick="cargarServicio('service4.html')">Accounts Payable</a></li>
+        <li><a href="#" onclick="cargarServicio('service5.html')">Business Income Tax</a></li>
+        <li><a href="#" onclick="cargarServicio('service6.html')">Outsourced CFO</a></li>
+        <li><a href="#" onclick="cargarServicio('service7.html')">Business Foundation Services</a></li>
       </ul>
     </div>
-    
-    <div id="informacion-servicio">
+  
+    <!-- Mobile Dropdown Menu -->
+    <div class="mobile-menu">
+      <button class="dropdown-button" onclick="toggleDropdown()">
+        Select the service You Want to know! <i class="fas fa-chevron-down"></i>
+      </button>
+      <ul class="dropdown-content" id="dropdown-content">
+        <li><a href="#" onclick="cargarServicio('service1.html')">Bookkeeping</a></li>
+        <li><a href="#" onclick="cargarServicio('service2.html')">Payroll</a></li>
+        <li><a href="#" onclick="cargarServicio('service3.html')">Sales & Use Tax</a></li>
+        <li><a href="#" onclick="cargarServicio('service4.html')">Accounts Payable</a></li>
+        <li><a href="#" onclick="cargarServicio('service5.html')">Business Income Tax</a></li>
+        <li><a href="#" onclick="cargarServicio('service6.html')">Outsourced CFO</a></li>
+        <li><a href="#" onclick="cargarServicio('service7.html')">Business Foundation Services</a></li>
+      </ul>
+    </div>
+  
+    <!-- Información del Servicio -->
+    <div id="informacion-servicio"  class="no-scroll">
       <iframe id="iframe-servicio" src="" frameborder="0">
         <!-- aquí se mostrará la información -->
       </iframe>
     </div>
   </section>
+    
   
   <script>
     // Esta función se ejecuta al cargar la página para mostrar el servicio 1 por defecto
@@ -213,6 +233,7 @@
       $("#sidebar ul li.active").removeClass('active');
       $(this).addClass('active');
     })
+    
   </script>
   
 
