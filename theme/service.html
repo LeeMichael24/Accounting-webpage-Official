@@ -193,7 +193,7 @@
 
     <!-- Información del Servicio -->
     <div id="informacion-servicio" class="no-scroll">
-      <iframe id="iframe-servicio" src="" frameborder="0">
+      <iframe id="iframe-servicio" src="" frameborder="0" width="100%">
         <!-- aquí se mostrará la información -->
       </iframe>
     </div>
@@ -232,6 +232,18 @@
           // Actualizar el texto del botón con el servicio seleccionado
           var dropdownButton = document.querySelector(".dropdown-button");
           dropdownButton.innerHTML = servicioSeleccionado + ' <i class="fas fa-chevron-down"></i>';
+
+
+
+          // Ajustar la altura del main-container cuando se carga el contenido del iframe
+          contenedorInformacion.onload = function () {
+            var iframeHeight = contenedorInformacion.contentWindow.document.body.scrollHeight;
+            var mainContainer = document.querySelector(".main-container");
+
+            // Ajustar la altura del main-container para que coincida con el contenido del iframe
+            mainContainer.style.height = iframeHeight + "px";
+          };
+
         }
       };
       xhr.send();
