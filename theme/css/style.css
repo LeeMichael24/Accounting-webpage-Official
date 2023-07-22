@@ -1799,7 +1799,7 @@ h3.quote::before {
 /* About css */
 .section.about {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateX(80px);
   transition: opacity 4s ease, transform 4s ease;
 }
 
@@ -1808,78 +1808,67 @@ h3.quote::before {
   transform: translateY(0);
 }
 
-.section.about .about-item {
-  position: relative;
-  z-index: 2;
-}
-
-.section.about .content-title {
-  font-size: 36px;
-  font-weight: bold;
+.section.about .about-title {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 3s ease, transform 3s ease;
+  transform: translateX(100%);
+  transition: opacity 4s ease, transform 4s ease;
 }
 
 .section.about .about-content {
-  margin-top: 30px;
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 2s ease, transform 2s ease;
+  transform: translateX(-100%);
+  transition: opacity 5s ease, transform 4s ease;
 }
 
-.section.about .about-content h4 {
-  font-size: 24px;
-  font-weight: bold;
+.section.about .about-image img {
+  transform: translateX(-100%);
+  transition: transform 1.5s ease;
+}
+
+.section.about .about-text {
   opacity: 0;
-  transform: translateY(20px);
+  transform: translateX(100%);
   transition: opacity 1s ease, transform 1s ease;
 }
 
-.section.about .about-content p {
-  margin-bottom: 20px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease, transform 1s ease;
+.section.about .about-text h4 {
+  transition-delay: 0.3s;
 }
 
-.section.about .btn-main {
-  margin-top: 30px;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease, transform 1s ease;
+.section.about .about-text p {
+  transition-delay: 0.5s;
 }
 
-.section.about .image-item {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1s ease, transform 1s ease;
+.section.about .about-content a {
+  transition-delay: 0.7s;
 }
 
-.section.about .image-item:nth-child(1) {
-  transition-delay: 1s;
-}
-
-.section.about .image-item:nth-child(2) {
-  transition-delay: 1s;
-}
-
-.section.about .image-item:nth-child(3) {
-  transition-delay: 1s;
-}
-
-.section.about.animate .content-title,
-.section.about.animate .about-content,
-.section.about.animate h4,
-.section.about.animate p,
-.section.about.animate .btn-main,
-.section.about.animate .image-item {
+.section.about.animate .about-title {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
 }
 
+.section.about.animate .about-content {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.section.about.animate .about-image img {
+  transform: translateX(0);
+}
+
+.section.about.animate .about-text {
+  opacity: 1;
+  transform: translateX(0);
+}
 
 /* About css */
+/* ABOUT TAB */
+
+
+
+
+/* END ABOUT TAB */
 
 
 /* Who We Serve */

@@ -196,3 +196,12 @@ function closeDropdown() {
   var dropdownContent = document.getElementById("dropdown-content");
   dropdownContent.classList.remove("open");
 }
+
+
+// Intersection Observer Setup
+const aboutSection = document.querySelector(".about-sec-top");
+
+const observerOptions = {
+  rootMargin: "0px",
+  threshold: 0.2,
+};
