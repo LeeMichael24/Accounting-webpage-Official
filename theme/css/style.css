@@ -718,6 +718,12 @@ ul.dropdown-menu li {
   background-size: cover;
   height: 300px;
 }
+@media (max-width: 768px) {
+  #header-WhoWeAre h1{
+    font-size: 40px;
+  }
+}
+
 .bg-1-WhatWeDo{
   background: url("../images/Categories-tabs/service-2.jpg") no-repeat 50% 50%;
   background-size: cover;
@@ -1934,7 +1940,7 @@ h3.quote::before {
 .main-container{
   padding: 5rem;
   width: 100%;
-  height: 130vh;
+  height: 250vh;
 }
 
 #sidebar {
@@ -1996,7 +2002,6 @@ h3.quote::before {
   align-items: center;
   justify-content: center;
   padding: 0 0 1rem 1rem;
-  margin-top: -20px;
 }
 
 @media (max-width: 768px) {
@@ -2022,6 +2027,7 @@ h3.quote::before {
     flex-direction: column;
     padding: 0;
     padding-top: 30px;
+    height: 305vh;
   }
   .desktop-menu {
     display: block;
