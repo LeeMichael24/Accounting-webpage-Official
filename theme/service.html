@@ -165,11 +165,13 @@
     <!-- Desktop Sidebar Menu -->
     <div id="sidebar">
       <ul class="desktop-menu">
-        <li class="activeDesk"><a onclick="cargarServicio('service1.html', this)">Bookkeeping</a></li>
-        <li class=""><a onclick="cargarServicio('service2.html', this)">Payroll</a></li>
-        <li class=""><a onclick="cargarServicio('service3.html', this)">Sales & Use Tax</a></li>
-        <li class=""><a onclick="cargarServicio('service4.html', this)">Accounts Payable</a></li>
-        <li class=""><a onclick="cargarServicio('service5.html', this)">Business Income Tax</a></li>
+        <li class="activeDesk"><a onclick="cargarServicio('service04.html', this)">Employee Retention Credit</a></li>
+        <li class=""><a onclick="cargarServicio('service05.html', this)">BOSS™</a></li>
+        <li class="px-4"><a onclick="cargarServicio('bookkeeping.html', this)">Bookkeeping</a></li>
+        <li class="px-4"><a onclick="cargarServicio('service2.html', this)">Payroll</a></li>
+        <li class="px-4"><a onclick="cargarServicio('service3.html', this)">Sales & Use Tax</a></li>
+        <li class="px-4"><a onclick="cargarServicio('service4.html', this)">Accounts Payable</a></li>
+        <li class="px-4"><a onclick="cargarServicio('service5.html', this)">Business Income Tax</a></li>
         <li class=""><a onclick="cargarServicio('service6.html', this)">Outsourced CFO</a></li>
         <li class=""><a onclick="cargarServicio('service7.html', this)">Business Foundation Services</a></li>
       </ul>
@@ -181,13 +183,15 @@
         Select the service You Want to know! <i class="fas fa-chevron-down"></i>
       </button>
       <ul class="dropdown-content" id="dropdown-content">
-        <li class="active"><a onclick="cargarServicio('service1.html')">Bookkeeping</a></li>
-        <li><a onclick="cargarServicio('service2.html')">Payroll</a></li>
-        <li><a onclick="cargarServicio('service3.html')">Sales & Use Tax</a></li>
-        <li><a onclick="cargarServicio('service4.html')">Accounts Payable</a></li>
-        <li><a onclick="cargarServicio('service5.html')">Business Income Tax</a></li>
-        <li><a onclick="cargarServicio('service6.html')">Outsourced CFO</a></li>
-        <li><a onclick="cargarServicio('service7.html')">Business Foundation Services</a></li>
+        <li class="active"><a onclick="cargarServicio('service04.html')">Employee Retention Credit</a></li>
+        <li class=""><a onclick="cargarServicio('service05.html')">BOSS™</a></li>
+        <li class="px-4"><a onclick="cargarServicio('bookkeeping.html')">Bookkeeping</a></li>
+        <li class="px-4"><a onclick="cargarServicio('service2.html')">Payroll</a></li>
+        <li class="px-4"><a onclick="cargarServicio('service3.html')">Sales & Use Tax</a></li>
+        <li class="px-4"><a onclick="cargarServicio('service4.html')">Accounts Payable</a></li>
+        <li class="px-4"><a onclick="cargarServicio('service5.html')">Business Income Tax</a></li>
+        <li class=""><a onclick="cargarServicio('service6.html')">Outsourced CFO</a></li>
+        <li class=""><a onclick="cargarServicio('service7.html')">Business Foundation Services</a></li>
       </ul>
     </div>
 
@@ -216,7 +220,7 @@
     // Esta función se ejecuta al cargar la página para mostrar el servicio predeterminado
     document.addEventListener("DOMContentLoaded", function () {
       setDefaultButtonText();
-      cargarServicio('service1.html');
+      cargarServicio('service7.html');
     });
 
     function cargarServicio(url) {
@@ -232,18 +236,6 @@
           // Actualizar el texto del botón con el servicio seleccionado
           var dropdownButton = document.querySelector(".dropdown-button");
           dropdownButton.innerHTML = servicioSeleccionado + ' <i class="fas fa-chevron-down"></i>';
-
-
-
-          // Ajustar la altura del main-container cuando se carga el contenido del iframe
-          contenedorInformacion.onload = function () {
-            var iframeHeight = contenedorInformacion.contentWindow.document.body.scrollHeight;
-            var mainContainer = document.querySelector(".main-container");
-
-            // Ajustar la altura del main-container para que coincida con el contenido del iframe
-            mainContainer.style.height = iframeHeight + "px";
-          };
-
         }
       };
       xhr.send();
