@@ -245,44 +245,51 @@
   </section>
 
 <!-- Js para dropdown menu y sidebar -->
+  
   <script>
-    function ajustarMainContainer() {
-      var iframeHeight = document.getElementById("iframe-servicio").contentWindow.document.body.scrollHeight;
-      var dropdownContent = document.getElementById("dropdown-content");
-      var dropdownHeight = dropdownContent.offsetHeight;
-      var maxHeight = Math.max(iframeHeight, dropdownHeight);
-
-      maxHeight += 150;
-      document.querySelector(".main-container").style.height = maxHeight + "px";
+    // Función para verificar si el dispositivo es móvil
+    function isMobile() {
+      return window.matchMedia("(max-width: 768px)").matches;
     }
-
+  
+    function ajustarMainContainer() {
+      // Solo ejecutar la función si el dispositivo es móvil
+      if (isMobile()) {
+        var iframeHeight = document.getElementById("iframe-servicio").contentWindow.document.body.scrollHeight;
+        var dropdownContent = document.getElementById("dropdown-content");
+        var dropdownHeight = dropdownContent.offsetHeight;
+        var maxHeight = Math.max(iframeHeight, dropdownHeight);
+        maxHeight += 175;
+        document.querySelector(".main-container").style.height = maxHeight + "px";
+      }
+    }
+  
     // Esta función se ejecuta al cargar la página para mostrar el servicio 1 por defecto
     document.addEventListener("DOMContentLoaded", function () {
       var dropdownButton = document.querySelector(".dropdown-button");
       cargarServicio('service04.html');
       ajustarMainContainer();
     });
-
+  
     document.getElementById("iframe-servicio").onload = function () {
       ajustarMainContainer(); // Ajustar la altura del main-container después de que el contenido se ha cargado
     };
-
-
+  
     // Función para establecer el texto predeterminado del botón
     function setDefaultButtonText() {
       var dropdownButton = document.querySelector(".dropdown-button");
       dropdownButton.innerHTML = 'Select a Service <i class="fas fa-chevron-down"></i>';
     }
-
+  
     function toggleDropdown() {
       var dropdownContent = document.getElementById("dropdown-content");
       dropdownContent.classList.toggle("open");
       ajustarMainContainer(); // Ajustar la altura del main-container al abrir o cerrar el menú desplegable
     }
-
+  
     function cargarServicio(url) {
       var contenedorInformacion = document.getElementById("iframe-servicio");
-
+  
       var xhr = new XMLHttpRequest();
       xhr.open("GET", url, true);
       xhr.onreadystatechange = function () {
@@ -296,40 +303,50 @@
         }
       };
       xhr.send();
-
-
+  
       // Remover la clase "active" de todos los elementos de la lista MOBILE
       var listaServicios = document.querySelectorAll("#dropdown-content li");
       listaServicios.forEach(function (servicioItem) {
         servicioItem.classList.remove("active");
       });
-
+  
       // Agregar la clase "active" al elemento seleccionado con nombre del servicio
       var servicioItemSeleccionado = event.target.parentElement;
       servicioItemSeleccionado.classList.add("active");
-
+  
       // Remover la clase "active" de todos los elementos de la lista Desktop
-      var listaServicios = document.querySelectorAll("#sidebar ul li");
-      listaServicios.forEach(function (servicioItem) {
+      var listaServiciosDesk = document.querySelectorAll("#sidebar ul li");
+      listaServiciosDesk.forEach(function (servicioItem) {
         servicioItem.classList.remove("activeDesk");
       });
-
+  
       // Agregar la clase "activeDesk" al elemento seleccionado
-      var servicioItemSeleccionado = event.target.parentElement;
       servicioItemSeleccionado.classList.add("activeDesk");
-
+  
       var dropdownContent = document.getElementById("dropdown-content");
       dropdownContent.classList.remove("open");
-
-      ajustarMainContainer();
-
+  
+      // Solo ajustar la altura del main-container si el dispositivo es móvil
+      if (isMobile()) {
+        ajustarMainContainer();
+      }
     }
-
   </script>
+  
+  
 
 
 
-  <!-- end sidebar -->
+  <!-- TEST -->
+<!-- Js para dropdown menu y sidebar -->
+<!-- Js para dropdown menu y sidebar -->
+<!-- Js para dropdown menu y sidebar -->
+<!-- Js para dropdown menu y sidebar -->
+
+
+
+
+
 
 
 
