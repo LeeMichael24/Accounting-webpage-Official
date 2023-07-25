@@ -164,7 +164,8 @@
     <!-- Desktop Sidebar Menu -->
     <div id="sidebar">
       <ul class="desktop-menu">
-        <li class="activeDesk"><a class="font-weight-bold" onclick="cargarServicio('service04.html', this)">EMPLOYEE RETENTION CREDIT</a></li>
+        <li class="activeDesk"><a class="font-weight-bold" onclick="cargarServicio('service04.html', this)">EMPLOYEE
+            RETENTION CREDIT</a></li>
         <li class=""><a onclick="cargarServicio('service05.html', this)">BOSS™</a></li>
         <li class="px-4"><a onclick="cargarServicio('bookkeeping.html', this)">Bookkeeping</a></li>
         <li class="px-4"><a onclick="cargarServicio('service2.html', this)">Payroll</a></li>
@@ -172,7 +173,8 @@
         <li class="px-4"><a onclick="cargarServicio('service4.html', this)">Accounts Payable</a></li>
         <li class="px-4"><a onclick="cargarServicio('service5.html', this)">Business Income Tax</a></li>
         <li class=""><a class="font-weight-bold" onclick="cargarServicio('service6.html', this)">OUTSOURCED CFO</a></li>
-        <li class=""><a class="font-weight-bold" onclick="cargarServicio('service7.html', this)">BUSINESS FUNDATION SERVICES</a></li>
+        <li class=""><a class="font-weight-bold" onclick="cargarServicio('service7.html', this)">BUSINESS FUNDATION
+            SERVICES</a></li>
         <li class="px-4"><a onclick="cargarServicio('service8.html')">Entity Type Analysis</a></li>
         <li class="px-4"><a onclick="cargarServicio('service9.html')">S Corporation</a></li>
         <li class="px-4"><a onclick="cargarServicio('service10.html')">C Corporation</a></li>
@@ -242,13 +244,29 @@
     </div>
   </section>
 
-
+<!-- Js para dropdown menu y sidebar -->
   <script>
+    function ajustarMainContainer() {
+      var iframeHeight = document.getElementById("iframe-servicio").contentWindow.document.body.scrollHeight;
+      var dropdownContent = document.getElementById("dropdown-content");
+      var dropdownHeight = dropdownContent.offsetHeight;
+      var maxHeight = Math.max(iframeHeight, dropdownHeight);
+
+      maxHeight += 150;
+      document.querySelector(".main-container").style.height = maxHeight + "px";
+    }
+
     // Esta función se ejecuta al cargar la página para mostrar el servicio 1 por defecto
     document.addEventListener("DOMContentLoaded", function () {
       var dropdownButton = document.querySelector(".dropdown-button");
-      cargarServicio('service1.html');
+      cargarServicio('service04.html');
+      ajustarMainContainer();
     });
+
+    document.getElementById("iframe-servicio").onload = function () {
+      ajustarMainContainer(); // Ajustar la altura del main-container después de que el contenido se ha cargado
+    };
+
 
     // Función para establecer el texto predeterminado del botón
     function setDefaultButtonText() {
@@ -256,11 +274,11 @@
       dropdownButton.innerHTML = 'Select a Service <i class="fas fa-chevron-down"></i>';
     }
 
-    // Esta función se ejecuta al cargar la página para mostrar el servicio predeterminado
-    document.addEventListener("DOMContentLoaded", function () {
-      setDefaultButtonText();
-      cargarServicio('service7.html');
-    });
+    function toggleDropdown() {
+      var dropdownContent = document.getElementById("dropdown-content");
+      dropdownContent.classList.toggle("open");
+      ajustarMainContainer(); // Ajustar la altura del main-container al abrir o cerrar el menú desplegable
+    }
 
     function cargarServicio(url) {
       var contenedorInformacion = document.getElementById("iframe-servicio");
@@ -303,14 +321,9 @@
       var dropdownContent = document.getElementById("dropdown-content");
       dropdownContent.classList.remove("open");
 
+      ajustarMainContainer();
+
     }
-
-
-    // Asignar un evento de clic al botón
-    document.getElementById("btnIrAContacto").addEventListener("click", function () {
-      // Abrir el enlace en una nueva pestaña del navegador
-      window.open("contact.html", "_blank");
-    });
 
   </script>
 
@@ -513,6 +526,7 @@ Essential Scripts
   <!-- Counterup -->
   <script src="plugins/counterup/jquery.waypoints.min.js"></script>
   <script src="plugins/counterup/jquery.counterup.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
   <script src="js/script.js"></script>
 

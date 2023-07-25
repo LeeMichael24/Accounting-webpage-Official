@@ -189,6 +189,7 @@ observer.observe(introSection);
 function toggleDropdown() {
   var dropdownContent = document.getElementById("dropdown-content");
   dropdownContent.classList.toggle("open");
+  ajustarMainContainer();
 }
 
 // Cerrar el dropdown menu
@@ -205,3 +206,97 @@ const observerOptions = {
   rootMargin: "0px",
   threshold: 0.2,
 };
+
+
+
+
+
+
+
+/* DropDown Menu y Sidebar menu */
+// Función para ajustar el tamaño del main-container
+function ajustarMainContainer() {
+  var iframeHeight = document.getElementById("iframe-servicio").contentWindow.document.body.scrollHeight;
+  var dropdownContent = document.getElementById("dropdown-content");
+  var dropdownHeight = dropdownContent.offsetHeight;
+  var maxHeight = Math.max(iframeHeight, dropdownHeight);
+
+  maxHeight += 150;
+  document.querySelector(".main-container").style.height = maxHeight + "px";
+}
+
+// Función para cargar el servicio
+function cargarServicio(url) {
+  var contenedorInformacion = document.getElementById("iframe-servicio");
+
+  var xhr = new XMLHttpRequest();
+  xhr.open("GET", url, true);
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      contenedorInformacion.srcdoc = xhr.responseText;
+      // Obtener el texto del servicio seleccionado
+      var servicioSeleccionado = document.querySelector("#dropdown-content .active a").textContent;
+      // Actualizar el texto del botón con el servicio seleccionado
+      var dropdownButton = document.querySelector(".dropdown-button");
+      dropdownButton.innerHTML = servicioSeleccionado + ' <i class="fas fa-chevron-down"></i>';
+
+      // Ajustar la altura del main-container después de cargar el servicio
+      ajustarMainContainer();
+    }
+  };
+  xhr.send();
+
+  // Resto del código para cargar el servicio...
+
+  // Remover la clase "active" de todos los elementos de la lista MOBILE
+  var listaServicios = document.querySelectorAll("#dropdown-content li");
+  listaServicios.forEach(function (servicioItem) {
+    servicioItem.classList.remove("active");
+  });
+
+  // Agregar la clase "active" al elemento seleccionado con nombre del servicio
+  var servicioItemSeleccionado = event.target.parentElement;
+  servicioItemSeleccionado.classList.add("active");
+
+  // Remover la clase "active" de todos los elementos de la lista Desktop
+  var listaServicios = document.querySelectorAll("#sidebar ul li");
+  listaServicios.forEach(function (servicioItem) {
+    servicioItem.classList.remove("activeDesk");
+  });
+
+  // Agregar la clase "activeDesk" al elemento seleccionado
+  var servicioItemSeleccionado = event.target.parentElement;
+  servicioItemSeleccionado.classList.add("activeDesk");
+
+  var dropdownContent = document.getElementById("dropdown-content");
+  dropdownContent.classList.remove("open");
+
+  ajustarMainContainer();
+}
+
+// Esta función se ejecuta al cargar la página para mostrar el servicio 1 por defecto
+document.addEventListener("DOMContentLoaded", function () {
+  var dropdownButton = document.querySelector(".dropdown-button");
+  cargarServicio('service04.html');
+  ajustarMainContainer();
+});
+
+document.getElementById("iframe-servicio").onload = function () {
+  ajustarMainContainer(); // Ajustar la altura del main-container después de que el contenido se ha cargado
+};
+
+// Resto del código...
+
+// Función para establecer el texto predeterminado del botón
+function setDefaultButtonText() {
+  var dropdownButton = document.querySelector(".dropdown-button");
+  dropdownButton.innerHTML = 'Select a Service <i class="fas fa-chevron-down"></i>';
+}
+
+function toggleDropdown() {
+  var dropdownContent = document.getElementById("dropdown-content");
+  dropdownContent.classList.toggle("open");
+  ajustarMainContainer(); // Ajustar la altura del main-container al abrir o cerrar el menú desplegable
+}
+
+/* DropDown Menu y Sidebar menu */
