@@ -128,15 +128,34 @@
   </div>
 </section>
 
-<!-- MAINTAINING PAGE -->
-<!-- <section class="sec-maintaining">
-	<div>
-	  <p class="maintaining-font">
-		WE ARE WORKING ON THIS PAGE. PLEASE CHECK BACK LATER. 
-	  </p>
-	</div>
-  </section> -->
-  <!-- MAINTING PAGE -->
+<!-- ANimacion del parrafo -->
+<style>
+  /* Estilo para la animación de deslizamiento desde la izquierda */
+  @keyframes slide-in-from-left {
+			from {
+				transform: translateX(-100%);
+			}
+			to {
+				transform: translateX(0);
+			}
+		}
+
+		/* Aplicar la animación a la clase .about-item */
+		.about-item {
+			animation: slide-in-from-left 4s forwards; /* La animación durará 1 segundo */
+		}
+		.about-item-tittle {
+			animation: slide-in-from-left 2s forwards; /* La animación durará 1 segundo */
+		}
+		.about-item-tittle-story {
+			animation: slide-in-from-left 8s forwards; /* La animación durará 1 segundo */
+		}
+		.about-item-tittle-story-content {
+			animation: slide-in-from-left 10s forwards; /* La animación durará 1 segundo */
+		}
+</style>
+
+<!-- ANimacion del parrafo -->
 
 <!-- Section About Start -->
 <section class="section position-relative about-sec-top about-sec-gap mt-0">
@@ -144,7 +163,7 @@
 		<div class="row">
 			<div class="col-lg-6">
 				<div class="about-item pr-3 mb-5 mb-lg-0">
-					<h3 class="mb-4 position-relative content-title">We are a dynamic team of creative people</h3>
+					<h3 class="mb-4 position-relative content-title about-item-tittle">We are a dynamic team of creative people</h3>
 					<p class="mb-5">we are a team of dedicated financial professionals committed to providing exceptional accounting solutions. With expertise in bookkeeping, payroll, tax services, and financial advisory, we empower our clients to achieve their financial goals. Through personalized attention, accuracy, and a forward-thinking approach, we strive to be the trusted partner you can rely on for all your financial needs.</p>
 
 					<!-- <a href="contact.html" class="btn btn-main btn-round-full">Get started</a> -->
@@ -165,7 +184,7 @@
 		<div class="row">
 			<div>
 				<div class="about-item ">
-					<h3 class="mt-3 mb-4 position-relative content-title ">Our Story</h3>
+					<h3 class="mt-3 mb-4 position-relative content-title about-item-tittle-story">Our Story</h3>
 					<p class="mb-5">SBA Consulting CPA (formerly Acosta Tax & Advisory, PA) is a distinguished tax and accounting firm specializing in comprehensive back-office solutions designed specifically for small to medium-sized businesses. Established in 2018 as a boutique firm in Hollywood, Florida, with a primary focus on Tax Preparation and Planning, we quickly recognized a common challenge faced by business owners. Managing accounting, tax compliance, and financial strategies while simultaneously handling day-to-day operations proved to be a daunting task. Many businesses deferred crucial accounting activities, only completing them to meet tax filing obligations, which posed significant risks and hindered their growth potential.</p>
 					<p>
 						Late bill payments often resulted in frequent assessments of substantial penalties, squandering funds that could have been better invested in operational endeavors. Our firm witnessed these financial hardships faced by businesses, particularly concerning filing returns, overdue tax payments, or audits related to income, payroll, or sales taxes. Few businesses proactively implemented tax and financial plans to minimize liabilities and enhance their bottom line, missing out on strategies such as contributing to tax-deferred retirement plans or optimizing their business structure.
