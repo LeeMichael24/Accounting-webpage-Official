@@ -848,9 +848,8 @@ ul.dropdown-menu li {
   font-weight: 600;
 }
 .about-content h4:before {
-  position: absolute;
-  content: "\f576";
-  font-family: "Font Awesome 5 Free";
+  font-family: "Themify";
+  content: "\e673";
   font-size: 30px;
   position: absolute;
   top: 8px;
