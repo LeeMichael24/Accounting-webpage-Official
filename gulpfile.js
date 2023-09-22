@@ -16,7 +16,7 @@ var path = {
     plugins: "source/plugins/**/*.*",
     js: "source/js/*.js",
     css: "source/css/*.css",
-    images: "source/images/**/*.+(png|jpg|gif|svg)",
+    images: "source/images/**/*.+(png|jpg|gif|svg|mp4)",
   },
   build: {
     dirBuild: "theme/",

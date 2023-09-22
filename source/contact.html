@@ -148,7 +148,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-6 col-md-12 col-sm-12">
-				<form id="contact-form" class="contact__form" method="post" action="index.html">
+				<form id="contact-form" action="https://formsubmit.co/acuario2001hercules@gmail.com" method="POST">
 					<h3 class="text-md mb-4">Reach Us Any Time!</h3>
 					<div class="form-group">
 						<input name="name" type="text" class="form-control" placeholder="Your Name" required>
@@ -160,6 +160,11 @@
 						<textarea name="message" class="form-control" rows="4" placeholder="Your Message" required></textarea>
 					</div>
 					<button class="btn btn-main" name="submit" type="submit">Send Message</button>
+
+          <input type="hidden" name="_next" value="http://localhost:3000/contact.html">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_subject" value="New submission!">
 				</form>
 			</div>
 
