@@ -275,6 +275,7 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 
 .card h2 {
   margin: 0;
+  font-weight: 550;
 }
 
 .card p {
@@ -762,16 +763,19 @@ ul.dropdown-menu li {
   background: url("../images/testing/home-1.png") no-repeat;
   background-size: cover;
   background-position: 10% 0%;
-  padding: 200px 0;
+  height: 90vh;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 768px) {
   .slider {
-    padding: 150px 0;
+    height: 85vh;
   }
 }
 .slider .block h1 {
-  font-size: 70px;
+  font-size: 65px;
   line-height: 80px;
   font-weight: 600;
   color: #fff;
