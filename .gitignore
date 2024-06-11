@@ -1,0 +1,20 @@
+# Node modules
+node_modules/
+
+# Package files
+package.json
+package-lock.json
+
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Optional npm cache directory
+.npm
+
+# Gulp specific
+.gulp/
+tmp/
+dist/

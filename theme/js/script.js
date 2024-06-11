@@ -196,18 +196,3 @@ const observerOptions = {
   rootMargin: "0px",
   threshold: 0.2,
 };
-
-
-
-document.addEventListener("DOMContentLoaded", function() {
-  var video = document.querySelector(".hero-video-commercial");
-
-  // Agrega la ruta local del video al src
-  video.src = "images/video/videoOficial.mp4"; // Cambia la ruta a tu video local
-
-  // Escuchar el evento "canplaythrough" para saber cuando el video está completamente cargado
-  video.addEventListener("canplaythrough", function() {
-      // Comienza a reproducir el video automáticamente
-      video.play();
-  });
-});
