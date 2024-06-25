@@ -200,20 +200,29 @@ const observerOptions = {
 
 // Lista de imágenes de fondo
 const backgrounds = [
-  'url("images/home/home-1.png")',
-  'url("images/home/home2.jpg")',
-  'url("images/home/home3.jpg")',
-  'url("images/home/home4.jpg")',
-  'url("images/home/home5.jpg")',
+  'images/home/home2.jpg',
+  'images/home/home4.jpg',
+  'images/home/home-1.png',
+  'images/home/home5.jpg',
+  'images/home/home3.jpg',
 ];
 
 let currentBackground = 0;
 const slider = document.querySelector('.slider');
 
+// Preload images
+backgrounds.forEach(image => {
+  const img = new Image();
+  img.src = image;
+});
+
 function changeBackground() {
   currentBackground = (currentBackground + 1) % backgrounds.length;
-  slider.style.backgroundImage = backgrounds[currentBackground];
+  slider.style.backgroundImage = `url(${backgrounds[currentBackground]})`;
 }
 
-// Cambia automáticamente las imágenes cada 5 segundos (5000 ms)
-setInterval(changeBackground, 5000);
+// Change images every 5 seconds (5000 ms)
+setInterval(changeBackground, 3500);
+
+// Initially load the first image
+slider.style.backgroundImage = `url(${backgrounds[0]})`;

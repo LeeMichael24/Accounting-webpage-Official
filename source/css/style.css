@@ -737,7 +737,6 @@ ul.dropdown-menu li {
 }
 
 .slider {
-  background: url("../images/testing/home-1.png") no-repeat;
   background-size: cover;
   background-position: 10% 0%;
   height: 90vh;
@@ -745,6 +744,7 @@ ul.dropdown-menu li {
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: background-image 1s ease-in-out; /* Smooth transition */
 }
 @media (max-width: 768px) {
   .slider {
