@@ -1796,92 +1796,12 @@ h3.quote::before {
 }
 
 
-/* About css */
-.section.about {
-  opacity: 0;
-  transform: translateX(80px);
-  transition: opacity 4s ease, transform 4s ease;
-}
-
-.section.about.animate {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.section.about .about-title {
-  opacity: 0;
-  transform: translateX(100%);
-  transition: opacity 4s ease, transform 4s ease;
-}
-
-.section.about .about-content {
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: opacity 5s ease, transform 4s ease;
-}
-
-.section.about .about-image img {
-  transform: translateX(-100%);
-  transition: transform 1.5s ease;
-}
-
-.section.about .about-text {
-  opacity: 0;
-  transform: translateX(100%);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.section.about .about-text h4 {
-  transition-delay: 0.3s;
-}
-
-.section.about .about-text p {
-  transition-delay: 0.5s;
-}
-
-.section.about .about-content a {
-  transition-delay: 0.7s;
-}
-
-.section.about.animate .about-title {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.section.about.animate .about-content {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.section.about.animate .about-image img {
-  transform: translateX(0);
-}
-
-.section.about.animate .about-text {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* About css */
-/* ABOUT TAB */
-
-
 
 
 /* END ABOUT TAB */
 
 
 /* Who We Serve */
-.section.intro {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 6s ease, transform 6s ease;
-}
-
-.section.intro.animate {
-  opacity: 1;
-  transform: translateY(0);
-}
 
 
 .section.intro .content-title {
