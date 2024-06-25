@@ -223,9 +223,45 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   padding: 70px 0;
 }
 
+
+
+
+
+
+
+/* OUR SERVICES SECTIN START & CARDS*/
+@media (max-width: 768px) {
+  .card{
+    height: fit-content;
+  }
+  .card-section{
+    margin-top: 20px;
+  }
+  #section-services {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
 #section-services {
   width: 100%;
   margin-bottom: 100px;
+}
+.section-title {
+  margin-bottom: 70px;
+}
+.section-title .title {
+  font-size: 50px;
+  line-height: 50px;
+}
+.section-title p {
+  color: #666;
+  font-family: "Poppins", sans-serif;
+}
+.subtitle {
+  color: #1C587B;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
 
 /* TEST CARD START*/
@@ -247,19 +283,7 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
   cursor: default;
   transition: all 400ms ease;
-}
-
-@media (max-width: 768px) {
-  .card{
-    height: fit-content;
-  }
-  .card-section{
-    margin-top: 20px;
-  }
-  #section-services {
-    width: 100%;
-    margin-bottom: 0;
-  }
+  background: linear-gradient(to bottom, white 83%, #486898 200%, #486898 100%);
 }
 
 .card:hover {
@@ -315,52 +339,27 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
     margin: 10px 0;
   }
 }
-
 /* TEST CARD END */
+/* OUR SERVICES SECTIN END */
 
-.section-title {
-  margin-bottom: 70px;
-}
-.section-title .title {
-  font-size: 50px;
-  line-height: 50px;
-}
-.section-title p {
-  color: #666;
-  font-family: "Poppins", sans-serif;
-}
 
-.subtitle {
-  color: #1C587B;
-  font-size: 14px;
-  letter-spacing: 1px;
-}
 
-/* section de home banner */
+
+
+
+
+
+/* SECTION DE BANNER HOME START */
 .slider {
-  height: 100vh;
-}
-
-@media (max-width: 1920px) {
-  .slider{
-    height: 100%;
-  }
-}
-@media (max-width: 992px) {
-  .slider{
-    height: 100vh;
-  }
-}
-@media (max-width: 1440px) {
-  .slider{
-    height: 90.5vh;
-  }
-}
-
-.overly, .hero-img, .cta, .slider, .page-title {
   position: relative;
+  height: 100vh; /* Ajusta la altura del slider según tus necesidades */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: background-image 0.5s ease; /* Transición suave de 0.5 segundos */
 }
-.overly:before, .hero-img:before, .cta:before, .slider:before, .page-title:before {
+
+.slider:before {
   content: "";
   position: absolute;
   left: 0;
@@ -373,52 +372,30 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   background: #000;
 }
 
-.overly-2, .latest-blog, .cta-block, .bg-counter {
-  position: relative;
+/* Ajusta las alturas según las necesidades del diseño responsivo */
+@media (max-width: 1920px) {
+  .slider {
+    height: 100%;
+  }
 }
-.overly-2:before, .latest-blog:before, .cta-block:before, .bg-counter:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+@media (max-width: 992px) {
+  .slider {
+    height: 100vh;
+  }
 }
+@media (max-width: 1440px) {
+  .slider {
+    height: 90.5vh;
+  }
+}
+/* SECTION DE BANNER HOME END */
 
-.text-color {
-  color: #1C587B;
-}
 
-.text-black {
-  color: #242424;
-}
 
-.text-color2 {
-  color: #c54041;
-}
 
-.text-color2 {
-  color: #b99769;
-}
 
-.text-sm {
-  font-size: 14px;
-}
 
-.text-md {
-  font-size: 2.25rem;
-}
 
-.text-lg {
-  font-size: 3.75rem;
-}
-
-.no-spacing {
-  letter-spacing: 0px;
-}
 
 /* Links */
 a {
@@ -840,9 +817,10 @@ ul.dropdown-menu li {
   top: 0px;
   width: 45%;
   min-height: 650px;
-  background: url("../images/about/about.jpg") no-repeat;
+  background: url("../images/about/SalvaAbout.jpg") no-repeat;
   background-size: cover;
-  border-radius: 10px 100px / 120px;
+  background-position: 70% 50%;
+  border-radius: 1px 50px 30px 1px;
 }
 
 .about-content {
@@ -852,8 +830,8 @@ ul.dropdown-menu li {
   font-weight: 600;
 }
 .about-content h4:before {
-  font-family: "Themify";
-  content: "\e673";
+  font-family: "Font Awesome 5 Free";
+  content: "\f201"; /* Example: Using the Font Awesome icon for "user" */
   font-size: 30px;
   position: absolute;
   top: 8px;
