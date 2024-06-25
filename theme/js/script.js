@@ -196,3 +196,24 @@ const observerOptions = {
   rootMargin: "0px",
   threshold: 0.2,
 };
+
+
+// Lista de imágenes de fondo
+const backgrounds = [
+  'url("images/home/home-1.png")',
+  'url("images/home/home2.jpg")',
+  'url("images/home/home3.jpg")',
+  'url("images/home/home4.jpg")',
+  'url("images/home/home5.jpg")',
+];
+
+let currentBackground = 0;
+const slider = document.querySelector('.slider');
+
+function changeBackground() {
+  currentBackground = (currentBackground + 1) % backgrounds.length;
+  slider.style.backgroundImage = backgrounds[currentBackground];
+}
+
+// Cambia automáticamente las imágenes cada 5 segundos (5000 ms)
+setInterval(changeBackground, 5000);

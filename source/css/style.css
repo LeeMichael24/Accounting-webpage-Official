@@ -223,9 +223,45 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   padding: 70px 0;
 }
 
+
+
+
+
+
+
+/* OUR SERVICES SECTIN START & CARDS*/
+@media (max-width: 768px) {
+  .card{
+    height: fit-content;
+  }
+  .card-section{
+    margin-top: 20px;
+  }
+  #section-services {
+    width: 100%;
+    margin-bottom: 0;
+  }
+}
+
 #section-services {
   width: 100%;
   margin-bottom: 100px;
+}
+.section-title {
+  margin-bottom: 70px;
+}
+.section-title .title {
+  font-size: 50px;
+  line-height: 50px;
+}
+.section-title p {
+  color: #666;
+  font-family: "Poppins", sans-serif;
+}
+.subtitle {
+  color: #1C587B;
+  font-size: 14px;
+  letter-spacing: 1px;
 }
 
 /* TEST CARD START*/
@@ -247,19 +283,7 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.2);
   cursor: default;
   transition: all 400ms ease;
-}
-
-@media (max-width: 768px) {
-  .card{
-    height: fit-content;
-  }
-  .card-section{
-    margin-top: 20px;
-  }
-  #section-services {
-    width: 100%;
-    margin-bottom: 0;
-  }
+  background: linear-gradient(to bottom, white 83%, #486898 200%, #486898 100%);
 }
 
 .card:hover {
@@ -275,6 +299,7 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
 
 .card h2 {
   margin: 0;
+  font-weight: 550;
 }
 
 .card p {
@@ -314,52 +339,27 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
     margin: 10px 0;
   }
 }
-
 /* TEST CARD END */
+/* OUR SERVICES SECTIN END */
 
-.section-title {
-  margin-bottom: 70px;
-}
-.section-title .title {
-  font-size: 50px;
-  line-height: 50px;
-}
-.section-title p {
-  color: #666;
-  font-family: "Poppins", sans-serif;
-}
 
-.subtitle {
-  color: #1C587B;
-  font-size: 14px;
-  letter-spacing: 1px;
-}
 
-/* section de home banner */
+
+
+
+
+
+/* SECTION DE BANNER HOME START */
 .slider {
-  height: 100vh;
-}
-
-@media (max-width: 1920px) {
-  .slider{
-    height: 100%;
-  }
-}
-@media (max-width: 992px) {
-  .slider{
-    height: 100vh;
-  }
-}
-@media (max-width: 1440px) {
-  .slider{
-    height: 90.5vh;
-  }
-}
-
-.overly, .hero-img, .cta, .slider, .page-title {
   position: relative;
+  height: 100vh; /* Ajusta la altura del slider según tus necesidades */
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: background-image 0.5s ease; /* Transición suave de 0.5 segundos */
 }
-.overly:before, .hero-img:before, .cta:before, .slider:before, .page-title:before {
+
+.slider:before {
   content: "";
   position: absolute;
   left: 0;
@@ -372,52 +372,30 @@ input[type=email]:focus, input[type=password]:focus, input[type=text]:focus, inp
   background: #000;
 }
 
-.overly-2, .latest-blog, .cta-block, .bg-counter {
-  position: relative;
+/* Ajusta las alturas según las necesidades del diseño responsivo */
+@media (max-width: 1920px) {
+  .slider {
+    height: 100%;
+  }
 }
-.overly-2:before, .latest-blog:before, .cta-block:before, .bg-counter:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.8);
+@media (max-width: 992px) {
+  .slider {
+    height: 100vh;
+  }
 }
+@media (max-width: 1440px) {
+  .slider {
+    height: 90.5vh;
+  }
+}
+/* SECTION DE BANNER HOME END */
 
-.text-color {
-  color: #1C587B;
-}
 
-.text-black {
-  color: #242424;
-}
 
-.text-color2 {
-  color: #c54041;
-}
 
-.text-color2 {
-  color: #b99769;
-}
 
-.text-sm {
-  font-size: 14px;
-}
 
-.text-md {
-  font-size: 2.25rem;
-}
 
-.text-lg {
-  font-size: 3.75rem;
-}
-
-.no-spacing {
-  letter-spacing: 0px;
-}
 
 /* Links */
 a {
@@ -762,16 +740,19 @@ ul.dropdown-menu li {
   background: url("../images/testing/home-1.png") no-repeat;
   background-size: cover;
   background-position: 10% 0%;
-  padding: 200px 0;
+  height: 90vh;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 768px) {
   .slider {
-    padding: 150px 0;
+    height: 85vh;
   }
 }
 .slider .block h1 {
-  font-size: 70px;
+  font-size: 65px;
   line-height: 80px;
   font-weight: 600;
   color: #fff;
@@ -836,9 +817,10 @@ ul.dropdown-menu li {
   top: 0px;
   width: 45%;
   min-height: 650px;
-  background: url("../images/about/about.jpg") no-repeat;
+  background: url("../images/about/SalvaAbout.jpg") no-repeat;
   background-size: cover;
-  border-radius: 10px 100px / 120px;
+  background-position: 70% 50%;
+  border-radius: 1px 50px 30px 1px;
 }
 
 .about-content {
@@ -848,8 +830,8 @@ ul.dropdown-menu li {
   font-weight: 600;
 }
 .about-content h4:before {
-  font-family: "Themify";
-  content: "\e673";
+  font-family: "Font Awesome 5 Free";
+  content: "\f201"; /* Example: Using the Font Awesome icon for "user" */
   font-size: 30px;
   position: absolute;
   top: 8px;
@@ -1814,130 +1796,17 @@ h3.quote::before {
 }
 
 
-/* About css */
-.section.about {
-  opacity: 0;
-  transform: translateX(80px);
-  transition: opacity 4s ease, transform 4s ease;
-}
-
-.section.about.animate {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.section.about .about-title {
-  opacity: 0;
-  transform: translateX(100%);
-  transition: opacity 4s ease, transform 4s ease;
-}
-
-.section.about .about-content {
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: opacity 5s ease, transform 4s ease;
-}
-
-.section.about .about-image img {
-  transform: translateX(-100%);
-  transition: transform 1.5s ease;
-}
-
-.section.about .about-text {
-  opacity: 0;
-  transform: translateX(100%);
-  transition: opacity 1s ease, transform 1s ease;
-}
-
-.section.about .about-text h4 {
-  transition-delay: 0.3s;
-}
-
-.section.about .about-text p {
-  transition-delay: 0.5s;
-}
-
-.section.about .about-content a {
-  transition-delay: 0.7s;
-}
-
-.section.about.animate .about-title {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.section.about.animate .about-content {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-.section.about.animate .about-image img {
-  transform: translateX(0);
-}
-
-.section.about.animate .about-text {
-  opacity: 1;
-  transform: translateX(0);
-}
-
-/* About css */
-/* ABOUT TAB */
-
-
 
 
 /* END ABOUT TAB */
 
 
 /* Who We Serve */
-.section.intro {
-  opacity: 0;
-  transform: translateY(50px);
-  transition: opacity 6s ease, transform 6s ease;
-}
 
-.section.intro.animate {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.section.intro .section-title {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 2s ease, transform 2s ease;
-}
 
 .section.intro .content-title {
   font-size: 36px;
   font-weight: bold;
-}
-
-.section.intro .intro-item {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 2s ease, transform 2s ease;
-}
-
-.section.intro .intro-item:nth-child(1) {
-  transition-delay: 0.3s;
-}
-
-.section.intro .intro-item:nth-child(2) {
-  transition-delay: 0.4s;
-}
-
-.section.intro .intro-item:nth-child(3) {
-  transition-delay: 0.5s;
-}
-
-.section.intro .intro-item:nth-child(4) {
-  transition-delay: 0.6s;
-}
-
-.section.intro.animate .section-title,
-.section.intro.animate .intro-item {
-  opacity: 1;
-  transform: translateY(0);
 }
 
 
